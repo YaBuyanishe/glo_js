@@ -15,7 +15,7 @@ const changeContent = (array, value) => {
     });
 };
 
-tabBtns.forEach((tabBtn, index) => {
+tabBtns.forEach(tabBtn => {
     tabBtn.addEventListener('click', (event) => {
         const dataValue = tabBtn.dataset.tabsHandler;
 
@@ -27,14 +27,7 @@ tabBtns.forEach((tabBtn, index) => {
             }
         });
 
-        tabTitle.forEach((title, indexTitle) => {
-            if (index === indexTitle) {
-                title.classList.remove('hidden');
-            } else {
-                title.classList.add('hidden');
-            }   
-        });
-
+        changeContent(tabTitle, dataValue);
         changeContent(tabTitleImg, dataValue);
         changeContent(tabImgs, dataValue);
         changeContent(tabDescrs, dataValue);
