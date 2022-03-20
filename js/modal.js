@@ -14,5 +14,5 @@ overlay.addEventListener('click', () => {
 });
 
 modalBtnClose.addEventListener('click', () => {
-    modal.classList.add('hidden');
+    modal.classList.toggle('hidden');
 });
