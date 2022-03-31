@@ -14,8 +14,9 @@ const updateClock = () => {
           seconds = Math.floor(timeRemaining % 60),
 
           formateT = timer => (timer < 10 ? `0${timer}` : timer);
+          
 
-    timerBlock.textContent = `${formateT(days)}:${formateT(hours)}:${formateT(minutes)}:${formateT(seconds)}`;
+    timerBlock.textContent = `${formateT(days)}д:${formateT(hours)}ч:${formateT(minutes)}м:${formateT(seconds)}с`;
 
     if (timeRemaining <= 0) {
         clearInterval(interval);

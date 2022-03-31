@@ -27,6 +27,15 @@ tabBtns.forEach(tabBtn => {
             }
         });
 
+        tabTitle.forEach(title => {
+            if(title.classList.contains('hidden')) {
+                title.classList.remove('hidden');
+                document.title = title.innerText;
+            } else {
+                title.classList.add('hidden');
+            }
+        });
+
         changeContent(tabTitle, dataValue);
         changeContent(tabTitleImg, dataValue);
         changeContent(tabImgs, dataValue);
